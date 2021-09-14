@@ -1,2 +1,6 @@
 # rabejs
-rabe javascript wrapper
+
+# Install 
+git submodule init
+git submodule update
+yarn
