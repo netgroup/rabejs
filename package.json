@@ -1,10 +1,10 @@
 {
-  "name": "rabe-js",
+  "name": "rabejs",
   "version": "0.1.0",
   "description": "javascript rabe wrapper",
-  "main": "rabe.node",
+  "main": "rabejs.node",
   "scripts": {
-    "build": "cargo-cp-artifact -nc rabe.node -- cargo build --message-format=json-render-diagnostics",
+    "build": "cargo-cp-artifact -nc rabejs.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
     "install": "npm run build-release",
