@@ -16,4 +16,4 @@ node_modules/
 package-lock.json
 
 yarn.lock
-rabe.node
+rabejs.node
