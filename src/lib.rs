@@ -95,8 +95,9 @@ fn decrypt_str(mut cx: FunctionContext) -> JsResult<JsString> {
 
     let plaintext_byte = bsw::decrypt(&sk, &ct_cp).unwrap();
     let plaintext:String = String::from_utf8(plaintext_byte).unwrap();
-    let pt_handle = cx.string(serde_json::to_string(&plaintext).unwrap());
+    //let pt_handle = cx.string(serde_json::to_string(&plaintext).unwrap());
 
+    let pt_handle = cx.string(&plaintext);
     Ok(pt_handle)
 }
 
