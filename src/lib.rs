@@ -112,12 +112,6 @@ fn decrypt(mut cx: FunctionContext) -> JsResult<JsBuffer> {
     let ct_cp: bsw::CpAbeCiphertext = serde_json::from_str(&ct_cp_json).unwrap();
 
     let plaintext_byte = bsw::decrypt(&sk, &ct_cp).unwrap();
-
-    //println!("{:?}",plaintext_byte);
-    //let plaintext_buf = &plaintext_byte[..];
-    //println!("{:?}",plaintext_buf);
-
-    //let mut buf = cx.buffer(plaintext_byte)?;
     let buffer = JsBuffer::external(&mut cx, plaintext_byte);
     Ok(buffer)
 }
